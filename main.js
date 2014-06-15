@@ -28,7 +28,8 @@ $(function(){
 
     // Setup css color
     var cssColor = generateGreyCSS();
-    $("#colorId").css({"background-color": cssColor});
+    $("#targetId").css({"background-color": cssColor});
+    $("#userBox").css({"background-color": "black"});
 
     // Generate CSS color:
     var targetColor = generateGreyCSS();
