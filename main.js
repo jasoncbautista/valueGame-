@@ -1,8 +1,17 @@
 $(function(){
+    var userBox = $("#userBox");
     var colorPicker = $("#color-picker");
 
     colorPicker.change(function(){
-        console.log(colorPicker.val());
+         var rgb  = colorPicker.val();
+        userBox.css("background-color", rgb);
+
+        var targetRGB = hexToRGBA(rgb);
+        if (targetRGB === cssColor){
+            $("#results").text("Correct");
+        } else {
+            $("#results").text("False: target" + targetRGB + ": yours: " + cssColor);
+        }
     });
 
     var _generateGreyColor = function(){
@@ -29,7 +38,7 @@ $(function(){
     // Setup css color
     var cssColor = generateGreyCSS();
     $("#targetId").css({"background-color": cssColor});
-    $("#userBox").css({"background-color": "black"});
+    userBox.css({"background-color": "black"});
 
     // Generate CSS color:
     var targetColor = generateGreyCSS();
