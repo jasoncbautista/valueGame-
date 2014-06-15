@@ -3,7 +3,8 @@ $(function(){
     colorPicker.change(function(){
         console.log(colorPicker.val());
         var cssColor = generateGreyCSS();
-        $("#colorId").css("background", cssColor);
+        console.log(cssColor);
+        $("#colorId").css({"background-color": cssColor});
     });
 
     var _generateGreyColor = function(){
@@ -16,6 +17,6 @@ $(function(){
 
     var generateGreyCSS = function(){
         var rgb = _generateGreyColor();
-        return "rgb(" + rgb + "," + rgb + "," + rgb +");";
+        return "rgb(" + rgb + "," + rgb + "," + rgb +")";
     };
 });
