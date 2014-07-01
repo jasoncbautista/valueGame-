@@ -46,6 +46,7 @@ $(function(){
     // Generate CSS color:
     var targetColor = generateGreyCSS();
 
-
+    // Slider:
+    // $("#slider1").val();
 
 });
