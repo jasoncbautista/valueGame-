@@ -15,8 +15,11 @@ $(function(){
     });
 
     var _generateGreyColor = function(){
-        var ii = Math.floor(Math.random() * 32);
-        var rgb = ii*8;
+        var ii = Math.floor(Math.random() * 256);
+
+        console.log('ii', ii);
+        var rgb = ii;
+        console.log('rgb', rgb);
         return rgb;
     };
 
