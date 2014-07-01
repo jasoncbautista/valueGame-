@@ -49,4 +49,5 @@ $(function(){
     // Slider:
     // $("#slider1").val();
 
+    // $("#slider1").change(function(e){console.log($("#slider1").val())});
 });
