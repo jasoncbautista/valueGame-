@@ -6,11 +6,11 @@ $(function(){
          var rgb  = colorPicker.val();
         userBox.css("background-color", rgb);
 
-        var targetRGB = hexToRGBA(rgb);
-        if (targetRGB === cssColor){
+        var yourRGB = hexToRGBA(rgb);
+        if (yourRGB === cssColor){
             $("#results").text("Correct");
         } else {
-            $("#results").text("False: target" + targetRGB + ": yours: " + cssColor);
+            $("#results").text("False: target" + yourRGB + ": yours: " + cssColor);
         }
     });
 
