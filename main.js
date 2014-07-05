@@ -49,14 +49,14 @@ $(function(){
     // Slider:
     // $("#slider1").val();
 
-     $("#slider1").change(function(e){
-         var val = $("#slider1").val();
-         console.log(val)
-         $('#slideValue').text(val);
+    $("#slider1").change(function(e){
+        var val = $("#slider1").val();
+        console.log(val)
+        $('#slideValue').text(val);
 
         var rgb = generateRGB(val);
         userBox.css("background-color", rgb);
-     });
+    });
 
     var generateRGB = function(rgb){
         return "rgb(" + rgb + "," + rgb + "," + rgb +")";
@@ -64,7 +64,15 @@ $(function(){
 
     $("#submitValue").click(function(){
         var val = $("#slider1").val();
+        var yourRGB = generateRGB(val);
         var rgb = generateRGB(val);
-        userBox.css("background-color", rgb);
-     });
+
+        if (yourRGB === cssColor){
+            $("#results").text("Correct");
+        } else {
+            $("#results").text("False: target" + cssColor + ": yours: " + yourRGB);
+        }
+
+    });
 });
+
