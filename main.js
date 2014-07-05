@@ -1,18 +1,5 @@
 $(function(){
     var userBox = $("#userBox");
-    var colorPicker = $("#color-picker");
-
-    colorPicker.change(function(){
-         var rgb  = colorPicker.val();
-        userBox.css("background-color", rgb);
-
-        var yourRGB = hexToRGBA(rgb);
-        if (yourRGB === cssColor){
-            $("#results").text("Correct");
-        } else {
-            $("#results").text("False: target" + yourRGB + ": yours: " + cssColor);
-        }
-    });
 
     var _generateGreyColor = function(){
         var ii = Math.floor(Math.random() * 256);
