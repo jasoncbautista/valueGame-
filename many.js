@@ -4,7 +4,7 @@ $(function(){
 
     for (var ii = 0; ii < 8; ii++){
 
-        var frame = $("<div> <iframe src='/index.html'></iframe></div>");
+        var frame = $("<div> <iframe frameBorder='0' src='/index.html'></iframe></div>");
         $("#iframeContainer").append(frame);
     }
 
