@@ -1,6 +1,7 @@
 $(function(){
     var userBox = $("#userBox");
 
+    $("#slider1").val(0);
     var _generateGreyColor = function(){
         var ii = Math.floor(Math.random() * 256);
 
@@ -57,7 +58,7 @@ $(function(){
         if (yourRGB === cssColor){
             $("#results").text("Correct");
         } else {
-            $("#results").text("False: target" + cssColor + ": yours: " + yourRGB);
+            $("#results").text("Wrong: target" + cssColor + ": yours: " + yourRGB);
         }
 
     });
