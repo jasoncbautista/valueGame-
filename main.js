@@ -49,5 +49,9 @@ $(function(){
     // Slider:
     // $("#slider1").val();
 
-    // $("#slider1").change(function(e){console.log($("#slider1").val())});
+     $("#slider1").change(function(e){
+         var val = $("#slider1").val();
+         console.log(val)
+         $('#slideValue').text(val);
+     });
 });
