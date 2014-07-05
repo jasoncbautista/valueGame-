@@ -53,5 +53,18 @@ $(function(){
          var val = $("#slider1").val();
          console.log(val)
          $('#slideValue').text(val);
+
+        var rgb = generateRGB(val);
+        userBox.css("background-color", rgb);
+     });
+
+    var generateRGB = function(rgb){
+        return "rgb(" + rgb + "," + rgb + "," + rgb +")";
+    };
+
+    $("#submitValue").click(function(){
+        var val = $("#slider1").val();
+        var rgb = generateRGB(val);
+        userBox.css("background-color", rgb);
      });
 });
