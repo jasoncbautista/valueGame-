@@ -56,12 +56,12 @@ $(function(){
         var rgb = generateRGB(val);
 
         if (yourRGB === cssColor){
-            $("#results").removeClass("alert-error");
+            $("#results").removeClass("alert-danger");
             $("#results").addClass("alert-success");
             $("#results").text("Correct");
         } else {
             $("#results").removeClass("alert-success");
-            $("#results").addClass("alert-error");
+            $("#results").addClass("alert-danger");
             $("#results").text("Wrong: target" + cssColor + ": yours: " + yourRGB);
         }
 
